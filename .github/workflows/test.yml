@@ -32,5 +32,5 @@ jobs:
       - run: uv venv
       - run: uv pip install --requirement pyproject.toml --all-extras
       - run: .venv/bin/ruff format --check graphql_core_promise tests
-      - run: .venv/bin/ruff graphql_core_promise tests
+      - run: .venv/bin/ruff check graphql_core_promise tests
       - run: .venv/bin/mypy graphql_core_promise
