@@ -151,6 +151,9 @@ def test_executes_simple_query(benchmark):
 
 
 def test_executes_query_one_promise_first_resolved_not_promise(benchmark):
+    name_loader_stub.reset_mock()
+    name_loader.clear_all()
+
     query_def = GraphQLObjectType(
         "Query",
         {
